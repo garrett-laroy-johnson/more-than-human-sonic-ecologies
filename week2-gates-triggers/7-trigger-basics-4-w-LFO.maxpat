@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 592.0, 192.0, 747.0, 346.0 ],
+		"rect" : [ 404.0, 183.0, 747.0, 346.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -71,7 +71,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 282.370368719100952, 105.0, 184.0, 68.0 ],
+					"patching_rect" : [ 288.370368719100952, 121.0, 184.0, 68.0 ],
 					"range" : [ -1.0, 12.0 ]
 				}
 
@@ -84,8 +84,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.0, 3.148147225379944, 284.0, 89.0 ],
-					"text" : "Trigger Basics 3: let there be sound\n"
+					"patching_rect" : [ 24.0, 3.148147225379944, 428.0, 89.0 ],
+					"text" : "Trigger Basics 4: now modulate speed with LFO\n"
 				}
 
 			}
@@ -106,7 +106,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 160.185184359550476, 167.0, 184.0, 68.0 ]
+					"patching_rect" : [ 164.790122906366975, 191.0, 184.0, 68.0 ]
 				}
 
 			}
@@ -174,7 +174,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 167.5, -39.0, 150.0, 62.0 ],
+									"patching_rect" : [ 179.5, 10.5, 150.0, 62.0 ],
 									"text" : "this is an LFO which is controlling the speed at which our latch sends out triggers"
 								}
 
@@ -186,7 +186,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 1.0, 91.0, 22.0 ],
+									"patching_rect" : [ 81.0, 50.5, 91.0, 22.0 ],
 									"text" : "scale -1 1 0.1 8"
 								}
 
@@ -198,7 +198,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 69.0, -33.5, 63.0, 22.0 ],
+									"patching_rect" : [ 81.0, 16.0, 63.0, 22.0 ],
 									"text" : "cycle 0.25"
 								}
 
@@ -209,7 +209,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 308.5, 212.0, 35.0, 22.0 ],
+									"patching_rect" : [ 320.5, 261.5, 35.0, 22.0 ],
 									"text" : "out 4"
 								}
 
@@ -221,7 +221,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 308.5, 180.0, 36.0, 22.0 ],
+									"patching_rect" : [ 320.5, 229.5, 36.0, 22.0 ],
 									"text" : "cycle"
 								}
 
@@ -233,7 +233,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 315.0, 107.5, 32.0, 22.0 ],
+									"patching_rect" : [ 327.0, 157.0, 32.0, 22.0 ],
 									"text" : "+ 60"
 								}
 
@@ -245,7 +245,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 315.0, 139.0, 32.0, 22.0 ],
+									"patching_rect" : [ 327.0, 188.5, 32.0, 22.0 ],
 									"text" : "mtof"
 								}
 
@@ -257,7 +257,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 237.0, 108.0, 32.0, 22.0 ],
+									"patching_rect" : [ 249.0, 157.5, 32.0, 22.0 ],
 									"text" : "floor"
 								}
 
@@ -268,7 +268,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 236.0, 180.0, 35.0, 22.0 ],
+									"patching_rect" : [ 248.0, 229.5, 35.0, 22.0 ],
 									"text" : "out 3"
 								}
 
@@ -280,7 +280,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 236.0, 148.0, 34.0, 22.0 ],
+									"patching_rect" : [ 248.0, 197.5, 34.0, 22.0 ],
 									"text" : "latch"
 								}
 
@@ -292,7 +292,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 236.0, 68.5, 87.0, 22.0 ],
+									"patching_rect" : [ 248.0, 118.0, 87.0, 22.0 ],
 									"text" : "scale -1 1 0 20"
 								}
 
@@ -304,7 +304,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 236.0, 33.5, 37.0, 22.0 ],
+									"patching_rect" : [ 248.0, 83.0, 37.0, 22.0 ],
 									"text" : "noise"
 								}
 
@@ -316,7 +316,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 139.0, 36.0, 22.0 ],
+									"patching_rect" : [ 81.0, 188.5, 36.0, 22.0 ],
 									"text" : "> 0.5"
 								}
 
@@ -327,7 +327,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ -4.0, 74.0, 66.0, 22.0 ],
+									"patching_rect" : [ 8.0, 123.5, 66.0, 22.0 ],
 									"text" : "out 1 ramp"
 								}
 
@@ -339,7 +339,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 108.0, 28.0, 22.0 ],
+									"patching_rect" : [ 81.0, 157.5, 28.0, 22.0 ],
 									"text" : "abs"
 								}
 
@@ -351,7 +351,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 74.0, 35.0, 22.0 ],
+									"patching_rect" : [ 81.0, 123.5, 35.0, 22.0 ],
 									"text" : "delta"
 								}
 
@@ -363,7 +363,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 33.5, 45.0, 22.0 ],
+									"patching_rect" : [ 81.0, 83.0, 45.0, 22.0 ],
 									"text" : "phasor"
 								}
 
@@ -374,7 +374,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 69.0, 180.0, 73.0, 22.0 ],
+									"patching_rect" : [ 81.0, 229.5, 73.0, 22.0 ],
 									"text" : "out 2 trigger"
 								}
 
@@ -515,7 +515,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 468.370368719100952, 81.0, 172.0, 22.0 ]
+					"patching_rect" : [ 467.370368719100952, 81.0, 172.0, 22.0 ]
 				}
 
 			}
