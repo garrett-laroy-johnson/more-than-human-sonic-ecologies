@@ -47,7 +47,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 323.0, 145.0, 249.0, 66.0 ],
-					"presentation_linecount" : 4,
 					"text" : "decay is how long it takes for a sound to fade from the release of the gate down to zero (this is in milliseconds, or 1/1000ths of a second."
 				}
 
@@ -61,7 +60,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 323.0, 89.0, 249.0, 52.0 ],
-					"presentation_linecount" : 3,
 					"text" : "attack is how long it takes for a sound to build from onset to peak (this is in milliseconds, or 1/1000ths of a second."
 				}
 
@@ -73,8 +71,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 335.0, 8.0, 244.0, 75.0 ],
-					"presentation_linecount" : 5,
+					"patching_rect" : [ 335.0, 8.0, 245.0, 75.0 ],
 					"text" : "The gate on and off is a basic building block of programming sound. We can \"smooth\" the gates movement from 0 (off) to 1 (on) and shape the sound in a more expressive and dynamic way. This is calle enveloping."
 				}
 
@@ -100,7 +97,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 323.0, 319.0, 249.0, 79.0 ],
-					"presentation_linecount" : 9,
 					"text" : "Here's the result! and it makes sense. Like before, we see the dense noise signal only when the trigger is on. Adjust the attack and decay parameters to see how the envelope changes."
 				}
 
@@ -113,8 +109,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 323.0, 213.0, 249.0, 93.0 ],
-					"presentation_linecount" : 7,
+					"patching_rect" : [ 323.0, 213.0, 252.0, 93.0 ],
 					"text" : "here's our new \"gate\" signal, which is now really an envelope because it is no longer just 0 or 1. *Again This signal isn't meant to be heard* -- rather, we will combine this (by multiplication) to create a more interesting sound"
 				}
 
@@ -220,7 +215,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 386.0, 176.0, 667.0, 409.0 ],
+						"rect" : [ 572.0, 172.0, 667.0, 409.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -313,8 +308,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 52.5, 19.0, 62.0, 22.0 ],
-									"text" : "out 2 gate"
+									"patching_rect" : [ 117.5, 271.0, 87.0, 22.0 ],
+									"text" : "out 2 envelope"
 								}
 
 							}
@@ -337,7 +332,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 49.5, 73.0, 37.0, 22.0 ],
+									"patching_rect" : [ 51.5, 112.0, 37.0, 22.0 ],
 									"text" : "noise"
 								}
 
@@ -347,8 +342,8 @@
 									"id" : "obj-7",
 									"maxclass" : "newobj",
 									"numinlets" : 4,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 13.5, 171.0, 169.0, 22.0 ],
 									"text" : "smoothgate"
 								}
@@ -375,16 +370,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-14", 0 ],
-									"order" : 0,
-									"source" : [ "obj-12", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-7", 0 ],
-									"order" : 1,
 									"source" : [ "obj-12", 0 ]
 								}
 
@@ -414,6 +400,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-7", 3 ],
 									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-14", 0 ],
+									"source" : [ "obj-7", 1 ]
 								}
 
 							}
