@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 216.0, 547.0, 744.0, 480.0 ],
+		"rect" : [ 214.0, 153.0, 744.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -103,7 +103,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 1105.0, 258.0, 547.0, 452.0 ],
+						"rect" : [ 492.0, 151.0, 547.0, 452.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -199,7 +199,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 36.0, 101.0, 176.0, 36.0 ],
+									"patching_rect" : [ 36.0, 101.0, 178.0, 36.0 ],
 									"text" : "param knob1 @min 440 @max 880"
 								}
 
@@ -321,12 +321,12 @@
 ,
 					"patching_rect" : [ 206.333328664302826, 91.333330988883972, 36.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "C:/Users/garre/OneDrive/Documents/Max 8/Library/more-than-human-sonic-ecologies/week8-daisy/",
-						"exportname" : "simply_2doopsy_2dtwo_2dpots"
+						"exportfolder" : "C:/Users/garre/OneDrive/Documents/Max 8/Library/more-than-human-sonic-ecologies/4-daisy/",
+						"exportname" : "simply_2doopsy_2dtwo_2dpots_2dswitch_2dgate"
 					}
 ,
 					"text" : "gen~",
-					"varname" : "simply_2doopsy_2dtwo_2dpots"
+					"varname" : "simply_2doopsy_2dtwo_2dpots_2dswitch_2dgate"
 				}
 
 			}

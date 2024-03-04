@@ -1,0 +1,449 @@
+{
+	"class": "Module",
+	"id": "node_1976",
+	"inlets": {
+		
+	},
+	"outlets": [
+		{
+			"assist": "out1"
+		},
+		{
+			"assist": "out2"
+		}
+	],
+	"imports": {
+		
+	},
+	"functions": {
+		
+	},
+	"block": {
+		"class": "Block",
+		"id": "node_2024",
+		"children": [
+			{
+				"class": "Declaration",
+				"id": "node_1978",
+				"name": "knob2",
+				"inputs": [
+					{
+						"class": "Constant",
+						"id": "node_1979",
+						"value": "0",
+						"eval": 0,
+						"type": "constant int",
+						"source": "box: [param knob2 0 @max 880 @min 440] => knob2"
+					}
+				],
+				"attributes": {
+					"max": {
+						"class": "Attribute",
+						"id": "node_1980",
+						"name": "max",
+						"value": {
+							"class": "Constant",
+							"id": "node_1836",
+							"value": "880",
+							"eval": 880,
+							"type": "constant int",
+							"source": "1:19 -> 1:22"
+						}
+					},
+					"min": {
+						"class": "Attribute",
+						"id": "node_1981",
+						"name": "min",
+						"value": {
+							"class": "Constant",
+							"id": "node_1838",
+							"value": "440",
+							"eval": 440,
+							"type": "constant int",
+							"source": "1:28 -> 1:31"
+						}
+					}
+				},
+				"type": "control t_sample",
+				"typename": "Param",
+				"source": "box: [param knob2 0 @max 880 @min 440] => knob2"
+			},
+			{
+				"class": "Declaration",
+				"id": "node_1982",
+				"name": "knob1",
+				"inputs": [
+					{
+						"class": "Constant",
+						"id": "node_1983",
+						"value": "0",
+						"eval": 0,
+						"type": "constant int",
+						"source": "box: [param knob1 0 @max 880 @min 440] => knob1"
+					}
+				],
+				"attributes": {
+					"max": {
+						"class": "Attribute",
+						"id": "node_1984",
+						"name": "max",
+						"value": {
+							"class": "Constant",
+							"id": "node_1830",
+							"value": "880",
+							"eval": 880,
+							"type": "constant int",
+							"source": "2:19 -> 2:22"
+						}
+					},
+					"min": {
+						"class": "Attribute",
+						"id": "node_1985",
+						"name": "min",
+						"value": {
+							"class": "Constant",
+							"id": "node_1832",
+							"value": "440",
+							"eval": 440,
+							"type": "constant int",
+							"source": "2:28 -> 2:31"
+						}
+					}
+				},
+				"type": "control t_sample",
+				"typename": "Param",
+				"source": "box: [param knob1 0 @max 880 @min 440] => knob1"
+			},
+			{
+				"class": "Declaration",
+				"id": "node_1986",
+				"name": "button",
+				"inputs": [
+					{
+						"class": "Constant",
+						"id": "node_1987",
+						"value": "0",
+						"eval": 0,
+						"type": "constant int",
+						"source": "box: [param button 0 @max 1 @min 0] => button"
+					}
+				],
+				"attributes": {
+					"max": {
+						"class": "Attribute",
+						"id": "node_1988",
+						"name": "max",
+						"value": {
+							"class": "Constant",
+							"id": "node_1824",
+							"value": "1",
+							"eval": 1,
+							"type": "constant int",
+							"source": "3:20 -> 3:21"
+						}
+					},
+					"min": {
+						"class": "Attribute",
+						"id": "node_1989",
+						"name": "min",
+						"value": {
+							"class": "Constant",
+							"id": "node_1826",
+							"value": "0",
+							"eval": 0,
+							"type": "constant int",
+							"source": "3:27 -> 3:28"
+						}
+					}
+				},
+				"type": "control t_sample",
+				"typename": "Param",
+				"source": "box: [param button 0 @max 1 @min 0] => button"
+			},
+			{
+				"class": "Statement",
+				"id": "node_1990",
+				"inputs": [
+					{
+						"class": "Expression",
+						"id": "node_1991",
+						"operator": "gt",
+						"inputs": [
+							{
+								"class": "Variable",
+								"id": "node_1992",
+								"name": "button",
+								"type": "control t_sample",
+								"source": "box: [gt $in1 0] => gt_112"
+							},
+							{
+								"class": "Constant",
+								"id": "node_1993",
+								"value": "0",
+								"eval": 0,
+								"type": "constant int",
+								"source": "box: [gt $in1 0] => gt_112"
+							}
+						],
+						"attributes": {
+							
+						},
+						"type": "control int",
+						"source": "box: [gt $in1 0] => gt_112"
+					}
+				],
+				"outputs": [
+					{
+						"class": "Variable",
+						"id": "node_1994",
+						"name": "gt_112",
+						"type": "control int",
+						"source": "box: [gt $in1 0] => gt_112"
+					}
+				],
+				"source": "box: [gt $in1 0] => gt_112"
+			},
+			{
+				"class": "Statement",
+				"id": "node_1995",
+				"inputs": [
+					{
+						"class": "Expression",
+						"id": "node_1996",
+						"operator": "cycle",
+						"inputs": [
+							{
+								"class": "Variable",
+								"id": "node_1997",
+								"name": "knob2",
+								"type": "control t_sample",
+								"source": "box: [cycle $in1] => cycle_8,cycleindex_9"
+							}
+						],
+						"attributes": {
+							
+						},
+						"type": "signal t_sample",
+						"source": "box: [cycle $in1] => cycle_8,cycleindex_9"
+					}
+				],
+				"outputs": [
+					{
+						"class": "Variable",
+						"id": "node_1998",
+						"name": "cycle_8",
+						"type": "signal t_sample",
+						"source": "box: [cycle $in1] => cycle_8,cycleindex_9"
+					},
+					{
+						"class": "Variable",
+						"id": "node_1999",
+						"name": "cycleindex_9",
+						"type": "signal t_sample",
+						"source": "box: [cycle $in1] => cycle_8,cycleindex_9"
+					}
+				],
+				"source": "box: [cycle $in1] => cycle_8,cycleindex_9"
+			},
+			{
+				"class": "Statement",
+				"id": "node_2000",
+				"inputs": [
+					{
+						"class": "Expression",
+						"id": "node_2001",
+						"operator": "gate",
+						"inputs": [
+							{
+								"class": "Variable",
+								"id": "node_2002",
+								"name": "gt_112",
+								"type": "control int",
+								"source": "box: [gate $in1 $in2 @choices 1] => gate_6"
+							},
+							{
+								"class": "Variable",
+								"id": "node_2003",
+								"name": "cycle_8",
+								"type": "signal t_sample",
+								"source": "box: [gate $in1 $in2 @choices 1] => gate_6"
+							}
+						],
+						"attributes": {
+							"choices": {
+								"class": "Attribute",
+								"id": "node_2004",
+								"name": "choices",
+								"value": {
+									"class": "Constant",
+									"id": "node_1854",
+									"value": "1",
+									"eval": 1,
+									"type": "constant int",
+									"source": "box: [gate $in1 $in2 @choices 1] => gate_6"
+								},
+								"source": "box: [gate $in1 $in2 @choices 1] => gate_6"
+							}
+						},
+						"type": "signal t_sample",
+						"source": "box: [gate $in1 $in2 @choices 1] => gate_6"
+					}
+				],
+				"outputs": [
+					{
+						"class": "Variable",
+						"id": "node_2005",
+						"name": "gate_6",
+						"type": "signal t_sample",
+						"source": "box: [gate $in1 $in2 @choices 1] => gate_6"
+					}
+				],
+				"source": "box: [gate $in1 $in2 @choices 1] => gate_6"
+			},
+			{
+				"class": "Statement",
+				"id": "node_2006",
+				"inputs": [
+					{
+						"class": "Variable",
+						"id": "node_2007",
+						"name": "gate_6",
+						"type": "signal t_sample",
+						"source": "box: [out 2 $in1] => "
+					}
+				],
+				"outputs": [
+					{
+						"class": "Variable",
+						"id": "node_2008",
+						"name": "out2",
+						"type": "signal t_sample",
+						"source": "box: [out 2 $in1] => "
+					}
+				],
+				"source": "box: [out 2 $in1] => "
+			},
+			{
+				"class": "Statement",
+				"id": "node_2009",
+				"inputs": [
+					{
+						"class": "Expression",
+						"id": "node_2010",
+						"operator": "cycle",
+						"inputs": [
+							{
+								"class": "Variable",
+								"id": "node_2011",
+								"name": "knob1",
+								"type": "control t_sample",
+								"source": "box: [cycle $in1] => cycle_10,cycleindex_11"
+							}
+						],
+						"attributes": {
+							
+						},
+						"type": "signal t_sample",
+						"source": "box: [cycle $in1] => cycle_10,cycleindex_11"
+					}
+				],
+				"outputs": [
+					{
+						"class": "Variable",
+						"id": "node_2012",
+						"name": "cycle_10",
+						"type": "signal t_sample",
+						"source": "box: [cycle $in1] => cycle_10,cycleindex_11"
+					},
+					{
+						"class": "Variable",
+						"id": "node_2013",
+						"name": "cycleindex_11",
+						"type": "signal t_sample",
+						"source": "box: [cycle $in1] => cycle_10,cycleindex_11"
+					}
+				],
+				"source": "box: [cycle $in1] => cycle_10,cycleindex_11"
+			},
+			{
+				"class": "Statement",
+				"id": "node_2014",
+				"inputs": [
+					{
+						"class": "Expression",
+						"id": "node_2015",
+						"operator": "gate",
+						"inputs": [
+							{
+								"class": "Variable",
+								"id": "node_2016",
+								"name": "gt_112",
+								"type": "control int",
+								"source": "box: [gate $in1 $in2 @choices 1] => gate_5"
+							},
+							{
+								"class": "Variable",
+								"id": "node_2017",
+								"name": "cycle_10",
+								"type": "signal t_sample",
+								"source": "box: [gate $in1 $in2 @choices 1] => gate_5"
+							}
+						],
+						"attributes": {
+							"choices": {
+								"class": "Attribute",
+								"id": "node_2018",
+								"name": "choices",
+								"value": {
+									"class": "Constant",
+									"id": "node_1869",
+									"value": "1",
+									"eval": 1,
+									"type": "constant int",
+									"source": "box: [gate $in1 $in2 @choices 1] => gate_5"
+								},
+								"source": "box: [gate $in1 $in2 @choices 1] => gate_5"
+							}
+						},
+						"type": "signal t_sample",
+						"source": "box: [gate $in1 $in2 @choices 1] => gate_5"
+					}
+				],
+				"outputs": [
+					{
+						"class": "Variable",
+						"id": "node_2019",
+						"name": "gate_5",
+						"type": "signal t_sample",
+						"source": "box: [gate $in1 $in2 @choices 1] => gate_5"
+					}
+				],
+				"source": "box: [gate $in1 $in2 @choices 1] => gate_5"
+			},
+			{
+				"class": "Statement",
+				"id": "node_2020",
+				"inputs": [
+					{
+						"class": "Variable",
+						"id": "node_2021",
+						"name": "gate_5",
+						"type": "signal t_sample",
+						"source": "box: [out 1 $in1] => "
+					}
+				],
+				"outputs": [
+					{
+						"class": "Variable",
+						"id": "node_2022",
+						"name": "out1",
+						"type": "signal t_sample",
+						"source": "box: [out 1 $in1] => "
+					}
+				],
+				"source": "box: [out 1 $in1] => "
+			}
+		]
+	},
+	"source": "patcher: gen.patcher 0000000007474C60 graph 0000000033761770"
+}

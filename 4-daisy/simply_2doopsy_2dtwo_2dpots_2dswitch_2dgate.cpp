@@ -1,6 +1,6 @@
-#include "simply_2doopsy_2dtwo_2dpots.h"
+#include "simply_2doopsy_2dtwo_2dpots_2dswitch_2dgate.h"
 
-namespace simply_2doopsy_2dtwo_2dpots {
+namespace simply_2doopsy_2dtwo_2dpots_2dswitch_2dgate {
 
 /****************************************************************************************
 Copyright (c) 2023 Cycling '74
@@ -68,14 +68,15 @@ static const int GENLIB_LOOPCOUNT_BAIL = 100000;
 // The State struct contains all the state and procedures for the gendsp kernel
 typedef struct State {
 	CommonState __commonstate;
+	SineCycle __m_cycle_6;
 	SineCycle __m_cycle_4;
-	SineCycle __m_cycle_3;
 	SineData __sinedata;
 	int __exception;
 	int vectorsize;
-	t_sample samplerate;
-	t_sample m_knob_2;
 	t_sample m_knob_1;
+	t_sample samplerate;
+	t_sample m_button_3;
+	t_sample m_knob_2;
 	// re-initialize all member variables;
 	inline void reset(t_param __sr, int __vs) {
 		__exception = 0;
@@ -83,8 +84,9 @@ typedef struct State {
 		samplerate = __sr;
 		m_knob_1 = ((int)0);
 		m_knob_2 = ((int)0);
-		__m_cycle_3.reset(samplerate, 0);
+		m_button_3 = ((int)0);
 		__m_cycle_4.reset(samplerate, 0);
+		__m_cycle_6.reset(samplerate, 0);
 		genlib_reset_complete(this);
 		
 	};
@@ -102,17 +104,22 @@ typedef struct State {
 			return __exception;
 			
 		};
+		int gt_112 = (m_button_3 > ((int)0));
+		int choice_5 = gt_112;
+		int choice_7 = gt_112;
 		// the main sample loop;
 		while ((__n--)) {
 			const t_sample in1 = (*(__in1++));
-			__m_cycle_3.freq(m_knob_2);
-			t_sample cycle_3 = __m_cycle_3(__sinedata);
-			t_sample cycleindex_4 = __m_cycle_3.phase();
-			t_sample out1 = cycle_3;
 			__m_cycle_4.freq(m_knob_1);
-			t_sample cycle_1 = __m_cycle_4(__sinedata);
-			t_sample cycleindex_2 = __m_cycle_4.phase();
-			t_sample out2 = cycle_1;
+			t_sample cycle_8 = __m_cycle_4(__sinedata);
+			t_sample cycleindex_9 = __m_cycle_4.phase();
+			t_sample gate_6 = ((choice_5 >= 1) ? cycle_8 : 0);
+			t_sample out2 = gate_6;
+			__m_cycle_6.freq(m_knob_2);
+			t_sample cycle_10 = __m_cycle_6(__sinedata);
+			t_sample cycleindex_11 = __m_cycle_6.phase();
+			t_sample gate_5 = ((choice_7 >= 1) ? cycle_10 : 0);
+			t_sample out1 = gate_5;
 			// assign results to output buffer;
 			(*(__out1++)) = out1;
 			(*(__out2++)) = out2;
@@ -126,6 +133,9 @@ typedef struct State {
 	};
 	inline void set_knob1(t_param _value) {
 		m_knob_2 = (_value < 440 ? 440 : (_value > 880 ? 880 : _value));
+	};
+	inline void set_button(t_param _value) {
+		m_button_3 = (_value < 0 ? 0 : (_value > 1 ? 1 : _value));
 	};
 	
 } State;
@@ -142,7 +152,7 @@ int gen_kernel_numouts = 2;
 
 int num_inputs() { return gen_kernel_numins; }
 int num_outputs() { return gen_kernel_numouts; }
-int num_params() { return 2; }
+int num_params() { return 3; }
 
 /// Assistive lables for the signal inputs and outputs
 
@@ -168,8 +178,9 @@ void reset(CommonState *cself) {
 void setparameter(CommonState *cself, long index, t_param value, void *ref) {
 	State *self = (State *)cself;
 	switch (index) {
-		case 0: self->set_knob1(value); break;
-		case 1: self->set_knob2(value); break;
+		case 0: self->set_button(value); break;
+		case 1: self->set_knob1(value); break;
+		case 2: self->set_knob2(value); break;
 		
 		default: break;
 	}
@@ -180,8 +191,9 @@ void setparameter(CommonState *cself, long index, t_param value, void *ref) {
 void getparameter(CommonState *cself, long index, t_param *value) {
 	State *self = (State *)cself;
 	switch (index) {
-		case 0: *value = self->m_knob_2; break;
-		case 1: *value = self->m_knob_1; break;
+		case 0: *value = self->m_button_3; break;
+		case 1: *value = self->m_knob_2; break;
+		case 2: *value = self->m_knob_1; break;
 		
 		default: break;
 	}
@@ -262,10 +274,24 @@ void *create(t_param sr, long vs) {
 	self->__commonstate.numouts = gen_kernel_numouts;
 	self->__commonstate.sr = sr;
 	self->__commonstate.vs = vs;
-	self->__commonstate.params = (ParamInfo *)genlib_sysmem_newptr(2 * sizeof(ParamInfo));
-	self->__commonstate.numparams = 2;
-	// initialize parameter 0 ("m_knob_2")
+	self->__commonstate.params = (ParamInfo *)genlib_sysmem_newptr(3 * sizeof(ParamInfo));
+	self->__commonstate.numparams = 3;
+	// initialize parameter 0 ("m_button_3")
 	pi = self->__commonstate.params + 0;
+	pi->name = "button";
+	pi->paramtype = GENLIB_PARAMTYPE_FLOAT;
+	pi->defaultvalue = self->m_button_3;
+	pi->defaultref = 0;
+	pi->hasinputminmax = false;
+	pi->inputmin = 0;
+	pi->inputmax = 1;
+	pi->hasminmax = true;
+	pi->outputmin = 0;
+	pi->outputmax = 1;
+	pi->exp = 0;
+	pi->units = "";		// no units defined
+	// initialize parameter 1 ("m_knob_2")
+	pi = self->__commonstate.params + 1;
 	pi->name = "knob1";
 	pi->paramtype = GENLIB_PARAMTYPE_FLOAT;
 	pi->defaultvalue = self->m_knob_2;
@@ -278,8 +304,8 @@ void *create(t_param sr, long vs) {
 	pi->outputmax = 880;
 	pi->exp = 0;
 	pi->units = "";		// no units defined
-	// initialize parameter 1 ("m_knob_1")
-	pi = self->__commonstate.params + 1;
+	// initialize parameter 2 ("m_knob_1")
+	pi = self->__commonstate.params + 2;
 	pi->name = "knob2";
 	pi->paramtype = GENLIB_PARAMTYPE_FLOAT;
 	pi->defaultvalue = self->m_knob_1;
@@ -306,4 +332,4 @@ void destroy(CommonState *cself) {
 }
 
 
-} // simply_2doopsy_2dtwo_2dpots::
+} // simply_2doopsy_2dtwo_2dpots_2dswitch_2dgate::

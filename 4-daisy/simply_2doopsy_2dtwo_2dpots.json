@@ -1,6 +1,6 @@
 {
 	"class": "Module",
-	"id": "node_6998",
+	"id": "node_31",
 	"inlets": {
 		
 	},
@@ -20,62 +20,16 @@
 	},
 	"block": {
 		"class": "Block",
-		"id": "node_7025",
+		"id": "node_58",
 		"children": [
 			{
 				"class": "Declaration",
-				"id": "node_7000",
-				"name": "knob1",
-				"inputs": [
-					{
-						"class": "Constant",
-						"id": "node_7001",
-						"value": "0",
-						"eval": 0,
-						"type": "constant int",
-						"source": "box: [param knob1 0 @max 880 @min 440] => knob1"
-					}
-				],
-				"attributes": {
-					"max": {
-						"class": "Attribute",
-						"id": "node_7002",
-						"name": "max",
-						"value": {
-							"class": "Constant",
-							"id": "node_6951",
-							"value": "880",
-							"eval": 880,
-							"type": "constant int",
-							"source": "1:19 -> 1:22"
-						}
-					},
-					"min": {
-						"class": "Attribute",
-						"id": "node_7003",
-						"name": "min",
-						"value": {
-							"class": "Constant",
-							"id": "node_6953",
-							"value": "440",
-							"eval": 440,
-							"type": "constant int",
-							"source": "1:28 -> 1:31"
-						}
-					}
-				},
-				"type": "control t_sample",
-				"typename": "Param",
-				"source": "box: [param knob1 0 @max 880 @min 440] => knob1"
-			},
-			{
-				"class": "Declaration",
-				"id": "node_7004",
+				"id": "node_33",
 				"name": "knob2",
 				"inputs": [
 					{
 						"class": "Constant",
-						"id": "node_7005",
+						"id": "node_34",
 						"value": "0",
 						"eval": 0,
 						"type": "constant int",
@@ -85,11 +39,57 @@
 				"attributes": {
 					"max": {
 						"class": "Attribute",
-						"id": "node_7006",
+						"id": "node_35",
 						"name": "max",
 						"value": {
 							"class": "Constant",
-							"id": "node_6945",
+							"id": "node_12",
+							"value": "880",
+							"eval": 880,
+							"type": "constant int",
+							"source": "1:19 -> 1:22"
+						}
+					},
+					"min": {
+						"class": "Attribute",
+						"id": "node_36",
+						"name": "min",
+						"value": {
+							"class": "Constant",
+							"id": "node_14",
+							"value": "440",
+							"eval": 440,
+							"type": "constant int",
+							"source": "1:28 -> 1:31"
+						}
+					}
+				},
+				"type": "control t_sample",
+				"typename": "Param",
+				"source": "box: [param knob2 0 @max 880 @min 440] => knob2"
+			},
+			{
+				"class": "Declaration",
+				"id": "node_37",
+				"name": "knob1",
+				"inputs": [
+					{
+						"class": "Constant",
+						"id": "node_38",
+						"value": "0",
+						"eval": 0,
+						"type": "constant int",
+						"source": "box: [param knob1 0 @max 880 @min 440] => knob1"
+					}
+				],
+				"attributes": {
+					"max": {
+						"class": "Attribute",
+						"id": "node_39",
+						"name": "max",
+						"value": {
+							"class": "Constant",
+							"id": "node_6",
 							"value": "880",
 							"eval": 880,
 							"type": "constant int",
@@ -98,11 +98,11 @@
 					},
 					"min": {
 						"class": "Attribute",
-						"id": "node_7007",
+						"id": "node_40",
 						"name": "min",
 						"value": {
 							"class": "Constant",
-							"id": "node_6947",
+							"id": "node_8",
 							"value": "440",
 							"eval": 440,
 							"type": "constant int",
@@ -112,58 +112,58 @@
 				},
 				"type": "control t_sample",
 				"typename": "Param",
-				"source": "box: [param knob2 0 @max 880 @min 440] => knob2"
+				"source": "box: [param knob1 0 @max 880 @min 440] => knob1"
 			},
 			{
 				"class": "Statement",
-				"id": "node_7008",
+				"id": "node_41",
 				"inputs": [
 					{
 						"class": "Expression",
-						"id": "node_7009",
+						"id": "node_42",
 						"operator": "cycle",
 						"inputs": [
 							{
 								"class": "Variable",
-								"id": "node_7010",
+								"id": "node_43",
 								"name": "knob1",
 								"type": "control t_sample",
-								"source": "box: [cycle $in1] => cycle_57,cycleindex_58"
+								"source": "box: [cycle $in1] => cycle_3,cycleindex_4"
 							}
 						],
 						"attributes": {
 							
 						},
 						"type": "signal t_sample",
-						"source": "box: [cycle $in1] => cycle_57,cycleindex_58"
+						"source": "box: [cycle $in1] => cycle_3,cycleindex_4"
 					}
 				],
 				"outputs": [
 					{
 						"class": "Variable",
-						"id": "node_7011",
-						"name": "cycle_57",
+						"id": "node_44",
+						"name": "cycle_3",
 						"type": "signal t_sample",
-						"source": "box: [cycle $in1] => cycle_57,cycleindex_58"
+						"source": "box: [cycle $in1] => cycle_3,cycleindex_4"
 					},
 					{
 						"class": "Variable",
-						"id": "node_7012",
-						"name": "cycleindex_58",
+						"id": "node_45",
+						"name": "cycleindex_4",
 						"type": "signal t_sample",
-						"source": "box: [cycle $in1] => cycle_57,cycleindex_58"
+						"source": "box: [cycle $in1] => cycle_3,cycleindex_4"
 					}
 				],
-				"source": "box: [cycle $in1] => cycle_57,cycleindex_58"
+				"source": "box: [cycle $in1] => cycle_3,cycleindex_4"
 			},
 			{
 				"class": "Statement",
-				"id": "node_7013",
+				"id": "node_46",
 				"inputs": [
 					{
 						"class": "Variable",
-						"id": "node_7014",
-						"name": "cycle_57",
+						"id": "node_47",
+						"name": "cycle_3",
 						"type": "signal t_sample",
 						"source": "box: [out 1 $in1] => "
 					}
@@ -171,7 +171,7 @@
 				"outputs": [
 					{
 						"class": "Variable",
-						"id": "node_7015",
+						"id": "node_48",
 						"name": "out1",
 						"type": "signal t_sample",
 						"source": "box: [out 1 $in1] => "
@@ -181,54 +181,54 @@
 			},
 			{
 				"class": "Statement",
-				"id": "node_7016",
+				"id": "node_49",
 				"inputs": [
 					{
 						"class": "Expression",
-						"id": "node_7017",
+						"id": "node_50",
 						"operator": "cycle",
 						"inputs": [
 							{
 								"class": "Variable",
-								"id": "node_7018",
+								"id": "node_51",
 								"name": "knob2",
 								"type": "control t_sample",
-								"source": "box: [cycle $in1] => cycle_55,cycleindex_56"
+								"source": "box: [cycle $in1] => cycle_1,cycleindex_2"
 							}
 						],
 						"attributes": {
 							
 						},
 						"type": "signal t_sample",
-						"source": "box: [cycle $in1] => cycle_55,cycleindex_56"
+						"source": "box: [cycle $in1] => cycle_1,cycleindex_2"
 					}
 				],
 				"outputs": [
 					{
 						"class": "Variable",
-						"id": "node_7019",
-						"name": "cycle_55",
+						"id": "node_52",
+						"name": "cycle_1",
 						"type": "signal t_sample",
-						"source": "box: [cycle $in1] => cycle_55,cycleindex_56"
+						"source": "box: [cycle $in1] => cycle_1,cycleindex_2"
 					},
 					{
 						"class": "Variable",
-						"id": "node_7020",
-						"name": "cycleindex_56",
+						"id": "node_53",
+						"name": "cycleindex_2",
 						"type": "signal t_sample",
-						"source": "box: [cycle $in1] => cycle_55,cycleindex_56"
+						"source": "box: [cycle $in1] => cycle_1,cycleindex_2"
 					}
 				],
-				"source": "box: [cycle $in1] => cycle_55,cycleindex_56"
+				"source": "box: [cycle $in1] => cycle_1,cycleindex_2"
 			},
 			{
 				"class": "Statement",
-				"id": "node_7021",
+				"id": "node_54",
 				"inputs": [
 					{
 						"class": "Variable",
-						"id": "node_7022",
-						"name": "cycle_55",
+						"id": "node_55",
+						"name": "cycle_1",
 						"type": "signal t_sample",
 						"source": "box: [out 2 $in1] => "
 					}
@@ -236,7 +236,7 @@
 				"outputs": [
 					{
 						"class": "Variable",
-						"id": "node_7023",
+						"id": "node_56",
 						"name": "out2",
 						"type": "signal t_sample",
 						"source": "box: [out 2 $in1] => "
@@ -246,5 +246,5 @@
 			}
 		]
 	},
-	"source": "patcher: gen.patcher 000000003A87C310 graph 000000002E743390"
+	"source": "patcher: gen.patcher 0000000035462080 graph 0000000039544B80"
 }
