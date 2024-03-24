@@ -1,0 +1,15 @@
+{
+  "name": "customseed",
+  "som": "seed",
+  "audio": {"channels": 2},
+  "components": {
+    "gateout1": {
+      "component": "GateOut",
+      "pin": 14
+    },
+   "gatein1": {
+      "component": "GateIn",
+      "pin": 13
+    }
+  }
+}

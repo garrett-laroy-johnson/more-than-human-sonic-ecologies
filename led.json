@@ -1,0 +1,15 @@
+{
+  "name": "customseed",
+  "som": "seed",
+  "audio": {"channels": 2},
+  "components": {
+    "led1": {
+      "component": "Led",
+      "pin": 15
+    },
+   "led2": {
+      "component": "Led",
+      "pin": 16
+    }
+  }
+}

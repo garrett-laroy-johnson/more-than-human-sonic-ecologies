@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 216.0, 547.0, 744.0, 480.0 ],
+		"rect" : [ 204.0, 148.0, 744.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,12 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@target", "pod" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
-					"id" : "obj-9",
+					"id" : "obj-4",
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
@@ -54,7 +53,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 358.166663706302643, 91.333330988883972, 128.0, 128.0 ],
+					"patching_rect" : [ 340.0, 73.0, 128.0, 128.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -103,7 +102,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 1105.0, 258.0, 547.0, 452.0 ],
+						"rect" : [ -21292.0, -21249.0, 547.0, 452.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -236,7 +235,7 @@
 ,
 					"patching_rect" : [ 206.333328664302826, 91.333330988883972, 36.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "C:/Users/garre/OneDrive/Documents/Max 8/Library/more-than-human-sonic-ecologies/week8-daisy/",
+						"exportfolder" : "C:/Users/garre/OneDrive/Documents/Max 8/Library/more-than-human-sonic-ecologies/4-daisy/",
 						"exportname" : "simply_2doopsy_2dtwo_2dpots"
 					}
 ,
@@ -265,9 +264,9 @@
  ],
 		"parameters" : 		{
 			"obj-2" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-9::obj-32" : [ "live.text[2]", "FILTER", 0 ],
-			"obj-9::obj-33" : [ "live.text[1]", "FILTER", 0 ],
-			"obj-9::obj-34" : [ "live.text[3]", "FILTER", 0 ],
+			"obj-4::obj-32" : [ "live.text[2]", "FILTER", 0 ],
+			"obj-4::obj-33" : [ "live.text[1]", "FILTER", 0 ],
+			"obj-4::obj-34" : [ "live.text[3]", "FILTER", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,

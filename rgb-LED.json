@@ -1,0 +1,24 @@
+{
+  "name": "customseed",
+  "som": "seed",
+  "audio": {"channels": 2},
+  "components": {
+  "led1": {
+            "component": "Led",
+            "pin": 15
+  },
+  "led2": {
+            "component": "Led",
+            "pin": 16
+  }, 
+  "led3": {
+            "component": "Led",
+            "pin": 17
+  },
+  "photo": {
+            "component": "AnalogControl",
+            "pin": 18
+  }
+
+}
+}
