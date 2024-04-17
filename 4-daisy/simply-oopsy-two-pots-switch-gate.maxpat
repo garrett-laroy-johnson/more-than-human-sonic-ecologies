@@ -210,7 +210,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 229.0, 278.0, 89.0, 22.0 ],
+									"patching_rect" : [ 219.0, 157.0, 89.0, 22.0 ],
 									"text" : "oopsy.gate.min"
 								}
 
@@ -222,7 +222,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 262.0, 239.0, 172.0, 22.0 ],
+									"patching_rect" : [ 252.0, 118.0, 172.0, 22.0 ],
 									"text" : "param button @min 0 @max 1"
 								}
 
